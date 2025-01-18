@@ -129,11 +129,11 @@ export default function Symposium() {
   ];
 
   return (
-    <div className="min-h-screen bg-gray-900 text-white">
+    <div className="min-h-screen bg-gray-900 bg-opacity-50 text-white">
       {/* Navbar */}
-      <header className="bg-gradient-to-r from-darkblue-600 to-black text-white py-4 px-8 shadow-lg sticky top-0 z-50">
+      <header className="bg-opacity-50 bg-dark-blue text-blue-500 text-glow py-8 px-8 shadow-lg sticky top-0 z-50">
         <div className="flex justify-between items-center max-w-7xl mx-auto">
-          <h1 className="text-2xl font-bold">Zorphix</h1>
+          <h1 className="text-2xl font-bold">              </h1>
           <nav
             className={`flex gap-6 text-sm ${isMobileMenuOpen ? "block" : "hidden"} md:flex`}
           >
@@ -153,6 +153,15 @@ export default function Symposium() {
             <span className="block w-6 h-1 bg-white"></span>
           </button>
         </div>
+<div className="fixed top-0 left-0 z-10 m-2">
+  <Image
+    src="/cit.png" // Replace with the path to your image (e.g., clg logo)
+    alt="CLG Logo"
+    width={120} // Adjust width as needed
+    height={120} // Adjust height as needed
+    className="object-contain"
+  />
+</div>
       </header>
 
       {/* Welcome Section */}
@@ -163,12 +172,23 @@ export default function Symposium() {
         <div className="absolute inset-0 z-0">
           <Spline scene="https://prod.spline.design/1M10LMFRrINdJ3xQ/scene.splinecode" />
         </div>
+        <div className="absolute inset-0 flex flex-col items-center justify-center z-10 pointer-events-none">
+          <Image
+            src="/zologo.png" // Replace with the path to your first image
+            alt="Zorphix Logo"
+            width={200}
+            height={200}
+            className="object-contain mb-6 pointer-events-none"
+          />
+          <Image
+            src="/zo.png" // Replace with the path to your second image
+            alt="Zorphix Logo"
+            width={200}
+            height={200}
+            className="object-contain pointer-events-none"
+          />
         <div className="relative z-10">
-          <h2 className="text-4xl font-bold mb-4">Welcome to Zorphix</h2>
-          <p className="text-lg mb-8">
-            Join us for an exhilarating symposium filled with innovation,
-            creativity, and collaboration.
-          </p>
+
         </div>
         <div className="relative z-10 mt-8">
           <div className="max-w-3xl mx-auto p-6 rounded-3xl bg-white bg-opacity-10 backdrop-blur-md text-center shadow-lg">
@@ -199,6 +219,7 @@ export default function Symposium() {
               </div>
             </div>
           </div>
+        </div>
         </div>
         <div className="absolute inset-0 bg-black bg-opacity-0 z-1 pointer-events-none"></div>
       </section>
