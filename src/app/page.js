@@ -45,10 +45,7 @@ export default function Symposium() {
           <span className="font-bold text-neutral-700 dark:text-neutral-200">
             The first rule of Apple club is that you boast about Apple club.
           </span>{" "}
-          Keep a journal, quickly jot down a grocery list, and take amazing
-          class notes. Want to convert those notes to text? No problem.
-          Langotiya jeetu ka mara hua yaar is ready to capture every
-          thought.
+          
         </p>
         <Image
           src="https://assets.aceternity.com/macbook.png"
@@ -129,31 +126,60 @@ export default function Symposium() {
   ];
 
   return (
-    <div className="min-h-screen bg-gray-900 text-white">
+    <div className="min-h-screen bg-gray-900 bg-opacity-50 text-white">
       {/* Navbar */}
-      <header className="bg-gradient-to-r from-darkblue-600 to-black text-white py-4 px-8 shadow-lg sticky top-0 z-50">
-        <div className="flex justify-between items-center max-w-7xl mx-auto">
-          <h1 className="text-2xl font-bold">Zorphix</h1>
-          <nav
-            className={`flex gap-6 text-sm ${isMobileMenuOpen ? "block" : "hidden"} md:flex`}
-          >
-            <a href="#welcome" className="hover:underline">Welcome</a>
-            <a href="#about" className="hover:underline">About</a>
-            <a href="#events" className="hover:underline">Events</a>
-            <a href="#workshop" className="hover:underline">Workshops</a>
-            <a href="#carousel" className="hover:underline">Gallery</a>
-            <Link href="/login" className="hover:underline">Login</Link>
-          </nav>
-          <button
-            className="md:hidden text-white"
-            onClick={() => setMobileMenuOpen(!isMobileMenuOpen)}
-          >
-            <span className="block w-6 h-1 bg-white mb-1"></span>
-            <span className="block w-6 h-1 bg-white mb-1"></span>
-            <span className="block w-6 h-1 bg-white"></span>
-          </button>
-        </div>
-      </header>
+      <header className="bg-dark-blue text-blue-500 text-glow py-6 px-4 shadow-lg sticky top-0 z-50">
+  <div className="flex justify-between items-center max-w-4xl mx-auto">
+    {/* Logo Section */}
+    <div className="flex items-center">
+      <div className="mr-10 ml-3">
+        <Image
+          src="/cit.png" // Replace with your logo path
+          alt="CLG Logo"
+          width={100} // Adjust width as needed
+          height={100} // Adjust height as needed
+          className="object-contain"
+        />
+      </div>
+      
+    </div>
+
+    {/* Navigation Links */}
+    <nav
+      className={`flex gap-10 text-sm ${isMobileMenuOpen ? "block" : "hidden"} md:flex`}
+    >
+      <a href="#welcome" className="hover:underline text-white">
+        Welcome
+      </a>
+      <a href="#about" className="hover:underline text-white">
+        About
+      </a>
+      <a href="#events" className="hover:underline text-white">
+        Events
+      </a>
+      <a href="#workshop" className="hover:underline text-white">
+        Workshops
+      </a>
+      <a href="#carousel" className="hover:underline text-white">
+        Gallery
+      </a>
+      <Link href="/login" className="hover:underline text-white">
+        Login
+      </Link>
+    </nav>
+
+    {/* Mobile Menu Button */}
+    <button
+      className="md:hidden text-white"
+      onClick={() => setMobileMenuOpen(!isMobileMenuOpen)}
+    >
+      <span className="block w-6 h-1 bg-white mb-1"></span>
+      <span className="block w-6 h-1 bg-white mb-1"></span>
+      <span className="block w-6 h-1 bg-white"></span>
+    </button>
+  </div>
+</header>
+
 
       {/* Welcome Section */}
       <section
@@ -163,12 +189,23 @@ export default function Symposium() {
         <div className="absolute inset-0 z-0">
           <Spline scene="https://prod.spline.design/1M10LMFRrINdJ3xQ/scene.splinecode" />
         </div>
+        <div className="absolute inset-0 flex flex-col items-center justify-center z-10 pointer-events-none">
+          <Image
+            src="/zologo.png" // Replace with the path to your first image
+            alt="Zorphix Logo"
+            width={200}
+            height={200}
+            className="object-contain mb-6 pointer-events-none"
+          />
+          <Image
+            src="/zo.png" // Replace with the path to your second image
+            alt="Zorphix Logo"
+            width={200}
+            height={200}
+            className="object-contain pointer-events-none"
+          />
         <div className="relative z-10">
-          <h2 className="text-4xl font-bold mb-4">Welcome to Zorphix</h2>
-          <p className="text-lg mb-8">
-            Join us for an exhilarating symposium filled with innovation,
-            creativity, and collaboration.
-          </p>
+
         </div>
         <div className="relative z-10 mt-8">
           <div className="max-w-3xl mx-auto p-6 rounded-3xl bg-white bg-opacity-10 backdrop-blur-md text-center shadow-lg">
@@ -199,6 +236,7 @@ export default function Symposium() {
               </div>
             </div>
           </div>
+        </div>
         </div>
         <div className="absolute inset-0 bg-black bg-opacity-0 z-1 pointer-events-none"></div>
       </section>
