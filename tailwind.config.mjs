@@ -14,8 +14,12 @@ module.exports = {
   theme: {
     extend: {
       colors: {
+        'dark-blue': '#101726',
         background: "var(--background)",
         foreground: "var(--foreground)",
+      },
+      boxShadow: {
+        'blue-glow': '0 0 15px rgba(59, 130, 246, 0.8)', // Custom glow effect
       },
     },
   },
@@ -28,6 +32,14 @@ module.exports = {
 
       addBase({
         ":root": newVars,
+      });
+    },
+    // Add a custom text-shadow for the glowing text effect
+    function addTextShadow({ addUtilities }) {
+      addUtilities({
+        '.text-glow': {
+          textShadow: '0 0 5px rgba(59, 130, 246, 0.8), 0 0 10px rgba(59, 130, 246, 0.6)',
+        },
       });
     },
   ],
