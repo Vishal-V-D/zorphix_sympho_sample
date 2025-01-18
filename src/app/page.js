@@ -353,9 +353,28 @@ export default function Symposium() {
 
 
         {/* Footer Section */}
-        <footer className="bg-gradient-to-r from-gray-800 to-black py-8 text-white text-center">
-          <p>&copy; 2025 Zorphix. All rights reserved.</p>
-        </footer>
+       <footer className="bg-gradient-to-r from-gray-800 to-black py-8 text-white text-center relative">
+  <p>&copy; 2025 Zorphix. All rights reserved.</p>
+
+  {/* WhatsApp Floating Button */}
+  <a
+    href="https://wa.me/<your_phone_number>?text=Hello!%20I%20would%20like%20to%20know%20more%20about%20Zorphix."
+    target="_blank"
+    rel="noopener noreferrer"
+    className="fixed bottom-12 right-6 bg-green-500 text-white rounded-full p-6 shadow-lg hover:bg-green-600 transition-transform transform hover:scale-110"
+    aria-label="Contact us on WhatsApp"
+  >
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      className="h-8 w-8"
+      fill="currentColor"
+      viewBox="0 0 24 24"
+    >
+      <path d="M12 0C5.373 0 0 5.373 0 12c0 2.092.524 4.075 1.515 5.84L0 24l6.272-1.485C8.03 23.475 10.01 24 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.888 0-3.754-.482-5.376-1.396l-.385-.215-3.724.881.791-3.581-.246-.382A9.933 9.933 0 012 12c0-5.514 4.486-10 10-10s10 4.486 10 10-4.486 10-10 10zm5.703-7.26c-.315-.158-1.863-.922-2.153-1.027-.29-.106-.502-.158-.714.158s-.822 1.027-1.008 1.24c-.184.215-.37.238-.685.08-.315-.158-1.33-.49-2.533-1.563-.937-.833-1.566-1.86-1.752-2.175-.184-.316-.02-.486.137-.644.14-.138.315-.37.472-.554.16-.184.213-.317.32-.53.106-.215.053-.398-.026-.555-.079-.158-.714-1.729-.978-2.368-.256-.613-.514-.529-.714-.539l-.604-.01c-.21 0-.555.08-.845.398s-1.11 1.086-1.11 2.647c0 1.561 1.14 3.075 1.298 3.29.158.215 2.242 3.43 5.43 4.808 2.732 1.147 3.293.918 3.884.865.592-.053 1.863-.759 2.125-1.49.263-.73.263-1.354.184-1.49-.079-.138-.29-.22-.604-.377z" />
+    </svg>
+  </a>
+</footer>
+
       </div>
     
   );
