@@ -299,6 +299,19 @@ export default function Symposium() {
   </div>
 </section>
 
+<section
+          id="carousel"
+          className="relative py-20 bg-gradient-to-r from-darkblue-600 to-black text-white"
+        >
+          <div className="absolute inset-0 bg-gradient-to-r from-darkblue-600 to-black opacity-50 blur-sm z-0"></div>
+          <div className="max-w-7xl mx-auto text-center relative z-10">
+            <h2 className="text-3xl font-bold mb-6">Gallery</h2>
+            <div className="w-full">
+              <Carousel items={data.map((card, index) => <Card key={card.src} card={card} index={index} />)} />
+            </div>
+          </div>
+        </section>
+      </div>
 
 
         {/* Footer Section */}
@@ -306,6 +319,6 @@ export default function Symposium() {
           <p>&copy; 2025 Zorphix. All rights reserved.</p>
         </footer>
       </div>
-    </div>
+    
   );
 }
